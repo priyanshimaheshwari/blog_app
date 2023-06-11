@@ -17,7 +17,7 @@ export default function Home() {
         
         </div>
         <div className={styles.item}>
-        <Image src="/Hero.png" width={500} height={700}  alt='Home' className="object-cover" />
+        <Image src="/Hero.png" width={500} height={700}  alt='Home' className={styles.img} />
         </div>
     </div>
   )
