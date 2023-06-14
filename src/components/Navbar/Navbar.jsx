@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
-import React from 'react'
-import Link from 'next/link'
-import DarkModeToggle from './DarkModeToggle/DarkModeToggle';
+import Link from "next/link";
+import React from "react";
+import styles from "./navbar.module.css";
+import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 
 const links = [
   {
@@ -39,9 +40,9 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div className='h-[100px] flex justify-between items-center'>
-      <Link href='/' className='font-bold text-lg'>Mania</Link>
-      <div className='flex items-center gap-5'>
+    <div className={styles.container}>
+      <Link href="/" className={styles.logo}>Mania</Link>
+      <div className={styles.links}>
         <DarkModeToggle />
       {links.map((link) => (
           <Link key={link.id} href={link.url} className='link'>
