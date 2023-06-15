@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 
 
 async function getData(){
-  const res=await fetch('https://jsonplaceholder.typicode.com/posts' ,{
+  const res=await fetch('https://localhost:3000/api/posts' ,{
     cache:"no-store",
   });
 
@@ -22,21 +22,21 @@ const Blog = async () => {
   return (
     <div className={styles.mainContainer} >
       {data.map(item=>(
-        <Link href="/blog/testId" className={styles.container} key={item.id}>
+        <Link href={`/blog/${id}`} className={styles.container} key={item.id}>
       
       
     <div className={styles.imgContainer}>
       <Image
         className={styles.img}
         fill={true}
-        src=''
+        src={item.img}
         alt=""
       />
     </div>
     
     <div className={styles.content}>
       <h1 className={styles.title}>{item.title}</h1>
-      <p className={styles.desc}>dec</p>
+      <p className={item.desc}>dec</p>
     </div>
     </Link>
 
