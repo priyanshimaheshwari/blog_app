@@ -1,4 +1,5 @@
-
+.container {
+}
 
 .title {
   font-size: 60px;
@@ -20,7 +21,7 @@
 
 .image {
   object-fit: contain;
-  animation: move 3s infinite ease alternate; 
+  /* animation: move 3s infinite ease alternate; */
 }
 
 @keyframes move {
@@ -29,7 +30,6 @@
   }
   to {
     transform: translateY(0px) scale(1.03);
-
   }
 }
 

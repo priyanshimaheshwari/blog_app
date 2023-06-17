@@ -1,11 +1,9 @@
 import React from 'react'
 
-const landing = () => {
+const Loading = () => {
   return (
-    <div>
-      
-    </div>
+    <div>Loading</div>
   )
 }
 
-export default landing
+export default Loading
