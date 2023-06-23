@@ -7,7 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
+      backgroundImage: {
+        'illustration-pattern': "url('/illustration.png')",
+        'website-pattern': "url('/websites.jpg')",
+        'app-pattern':"url('/apps.jpg')",
+      }
     },
   },
   plugins: [],

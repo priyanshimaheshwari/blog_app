@@ -1,10 +1,9 @@
 import React from 'react'
-import styles from './page.module.css'
 
 const Layout = ({children}) => {
   return (
     <div>
-      <h1 className="">Our Works</h1>
+      <h1 className="text-8xl">Our Works</h1>
       {children}
     </div>
   )

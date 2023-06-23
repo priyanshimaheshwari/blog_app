@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./page.module.css";
 import Image from "next/image";
 import {items} from "./data.js";
 import {notFound} from "next/navigation";
@@ -19,19 +18,19 @@ const getData = (cat) => {
 const Category = ({ params }) => {
   const data = getData(params.category);
   return (
-    <div className={styles.container}>
-      <h1 className={styles.catTitle}>{params.category}</h1>
+    <div className="">
+      <h1 className="text-[#53c28b] text-5xl mt-8 ">{params.category}</h1>
 
       {data.map((item) => (
-        <div className={styles.item} key={item.id}>
-          <div className={styles.content}>
-            <h1 className={styles.title}>{item.title}</h1>
-            <p className={styles.desc}>{item.desc}</p>
+        <div className="flex gap-12 mt-12 mb-24 [&:nth-child(odd)]:flex-row-reverse" key={item.id}>
+          <div className="flex-1 flex flex-col justify-center gap-3">
+            <h1 className="text-5xl">{item.title}</h1>
+            <p className="text-xl">{item.desc}</p>
             <Button text="See More" url="#" />
           </div>
-          <div className={styles.imgContainer}>
+          <div className="flex-1 h-[500px] relative">
             <Image
-              className={styles.img}
+              className="object-cover"
               fill={true}
               src={item.image}
               alt=""

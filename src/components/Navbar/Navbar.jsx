@@ -46,7 +46,7 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-between h-20">
       <Link href="/" className="font-bold text-2xl">
-        lamamia
+        Mamia
       </Link>
       <div className="flex items-center gap-6">
         <DarkModeToggle />

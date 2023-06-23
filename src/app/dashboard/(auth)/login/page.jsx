@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import styles from "./page.module.css";
 import { getProviders, signIn, useSession } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
@@ -37,36 +36,36 @@ const Login = ({ url }) => {
   };
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>{success ? success : "Welcome Back"}</h1>
-      <h2 className={styles.subtitle}>Please sign in to see the dashboard.</h2>
+    <div className="flex flex-col items-center gap-4">
+      <h1 className="text-[#bbb]">{success ? success : "Welcome Back"}</h1>
+      <h2 className="text-[#bbb] mb-8 text-xl ">Please sign in to see the dashboard.</h2>
 
-      <form onSubmit={handleSubmit} className={styles.form}>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-[300px]">
         <input
           type="text"
           placeholder="Email"
           required
-          className={styles.input}
+          className="bg-transparent p-4 border-2 rounded border-[#bbb] font-bold text-xl"
         />
         <input
           type="password"
           placeholder="Password"
           required
-          className={styles.input}
+          className="bg-transparent p-4 border-2 rounded border-[#bbb] font-bold text-xl"
         />
-        <button className={styles.button}>Login</button>
+        <button className="w-[300px] p-4 bg-[#53c28b] rounded text-lg text-white font-bold hover:bg-[#49b07d]">Login</button>
         {error && error}
       </form>
       <button
         onClick={() => {
           signIn("google");
         }}
-        className={styles.button + " " + styles.google}
+        className="w-[300px] p-4 bg-red-500 rounded text-lg text-white font-bold hover:bg-red-800"
       >
         Login with Google
       </button>
-      <span className={styles.or}>- OR -</span>
-      <Link className={styles.link} href="/dashboard/register">
+      <span className="text-[#bbb]">- OR -</span>
+      <Link className="underline text-[#605f5f] hover:text-[rgb(84,83,83)] cursor-pointer" href="/dashboard/register">
         Create new account
       </Link>
       {/* <button
