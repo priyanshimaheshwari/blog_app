@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./page.module.css";
-import Button from "@/components/Button/Button";
 import Image from "next/image";
-import { items } from "./data.js";
-import { notFound } from "next/navigation";
+import {items} from "./data.js";
+import {notFound} from "next/navigation";
+import Button from "@/src/components/Button/Button";
+
 
 const getData = (cat) => {
   const data = items[cat];

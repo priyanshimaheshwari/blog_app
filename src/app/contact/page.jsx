@@ -1,36 +1,34 @@
 import React from "react";
-import styles from "./page.module.css";
 import Image from "next/image";
-import Button from "@/components/Button/Button";
 
 export const metadata = {
-  title: "Lama Dev Contact Information",
+  title: "Contact Information",
   description: "This is Contact Page",
 };
 
 const Contact = () => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Let's Keep in Touch</h1>
-      <div className={styles.content}>
-        <div className={styles.imgContainer}>
+    <div className="">
+      <h1 className="text-6xl mb-16 text-center">Let's Keep in Touch</h1>
+      <div className="flex items-center gap-20">
+        <div className="flex-1 h-[500px] relative">
           <Image
             src="/contact.png"
             alt=""
             fill={true}
-            className={styles.image}
+            className="object-contain animate-bounce"
           />
         </div>
-        <form className={styles.form}>
-          <input type="text" placeholder="name" className={styles.input} />
-          <input type="text" placeholder="email" className={styles.input} />
+        <form className="flex-1 flex flex-col gap-2">
+          <input type="text" placeholder="name" className="p-6 bg-transparent border-4   border-[#bbb] text-[#bbb] font-bold text-xl " />
+          <input type="text" placeholder="email" className="p-6 bg-transparent border-4   border-[#bbb] text-[#bbb] font-bold text-xl " />
           <textarea
-            className={styles.textArea}
+            className="p-6 bg-transparent border-4   border-[#bbb] text-[#bbb] font-bold text-xl "
             placeholder="message"
             cols="30"
             rows="10"
           ></textarea>
-          <Button url="#" text="Send"/>
+          <button  className="text-white bg-[#53c28b] p-4 rounded-lg" ><a href="#">Send</a></button>
         </form>
       </div>
     </div>
